@@ -1,0 +1,22 @@
+Laravel: Kerangka Aplikasi Web dengan Syntax yang Ekspresif dan Elegan
+
+Apa itu Laravel?
+Laravel adalah sebuah kerangka aplikasi web yang dirancang untuk mendukung pembangunan aplikasi web. Ini menyediakan standar dan panduan untuk membangun aplikasi web dengan otomatisasi tugas umum seperti koneksi ke database, penggunaan mesin templat, manajemen sesi, otentikasi, dan keamanan, serta banyak fitur lainnya. Dibuat oleh Taylor Otwell pada bulan Juni 2011, Laravel menjadi alternatif populer dari kerangka aplikasi web lainnya seperti CodeIgniter (CI). Versi terbaru dari Laravel adalah versi 10.
+
+Filosofi dan Tujuan:
+Filosofi Laravel adalah bahwa pengembangan harus menjadi pengalaman yang menyenangkan dan kreatif untuk benar-benar memuaskan. Tujuannya adalah membuat proses pengembangan menjadi pengalaman yang menyenangkan bagi pengembang tanpa mengorbankan fungsionalitas aplikasi. Pengembang yang bahagia menghasilkan kode terbaik.
+
+Fitur Utama:
+Laravel menawarkan berbagai fitur termasuk Model-View-Controller (MVC), mesin templat, konsol Artisan, ORM Eloquent, autentikasi dan otorisasi, pengujian, sistem pengemasan, sistem file ganda, penjadwalan tugas, dan pemrograman websocket.
+
+Ekosistem:
+Laravel memiliki ekosistem yang berkembang dengan berbagai alat pendukung seperti Vapor, Horizon, Lumen, Valet, Forge, dan banyak lainnya.
+
+Contoh Situs Web yang Dibuat dengan Laravel:
+Beberapa situs web terkenal yang dibuat menggunakan Laravel dapat ditemukan di awwwards.com/websites/laravel.
+
+Prasyarat:
+Untuk memulai dengan Laravel, pengetahuan dasar tentang PHP, penggunaan PHP berorientasi objek, dan pemahaman tentang Model-View-Controller (MVC) sangat dianjurkan.
+
+Persyaratan Perangkat Lunak:
+Untuk mengembangkan aplikasi dengan Laravel, Anda memerlukan instalasi PHP terbaru, MySQL sebagai sistem manajemen database, Composer sebagai manajer paket PHP, dan alat manajemen database seperti SequelPro atau MySQL Workbench. Selain itu, Anda memerlukan terminal atau cmd/powershell/gitbash untuk menjalankan perintah, Visual Studio Code (VSC) sebagai editor kode, dan beberapa ekstensi seperti PHP Intelephense, Laravel Artisan, Laravel Snippets, Laravel Blade Snippets, dan Laravel Blade Spacer untuk meningkatkan produktivitas pengembangan Anda.
