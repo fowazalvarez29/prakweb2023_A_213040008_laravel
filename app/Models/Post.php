@@ -33,9 +33,9 @@ class Post extends Model
             });
         }); 
 
-        $query->when($filters['author']??false, fn($query, $author)=>
-            $query->whereHas('author', fn($query)=>
-                $query->where('username', $author)
+        $query->when($filters['author']??false, fn($query, $user)=>
+            $query->whereHas('user', fn($query)=>
+                $query->where('username', $user)
             )
             );
     }
