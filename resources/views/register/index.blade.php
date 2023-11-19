@@ -46,8 +46,9 @@
         </div>
         <button class="btn btn-primary w-100 py-2 mt-3" type="submit">Register</button>
       </form>
-      <small class="d-block text-center mt-3">Already registered?<a href="/login">Login</a></small>
+      <small class="d-block text-center mt-3">Already registered? <a href="/login">Login</a></small>
     </main>
   </div>
 </div>
+
 @endsection
