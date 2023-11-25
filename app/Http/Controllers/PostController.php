@@ -11,32 +11,31 @@ class PostController extends Controller
 {
     public function index()
     {
-        $title='';
-        if(request('category')) {
+        $title = '';
+        if (request('category')) {
             $category = Category::firstWhere('slug', request('category'));
             $title = ' in ' . $category->name;
         }
         // dd(request('search'));
-        if(request('author')) {
-            $author = User::firstWhere('username', request('author'));
-            $title = ' by ' . $author->name;
+        if (request('author')) {
+            $user = User::firstWhere('username', request('author'));
+            $title = ' by ' . $user->name;
         }
 
         return view('posts', [
             "title" => "All Posts" . $title,
-            "active"=>'posts',
-            // "posts" => Post::all()
-            "posts" => Post::latest()->filter(request(['search','category','author']))
-            ->paginate(7)->withQueryString()
+            "active" => 'posts',
+            "posts" => Post::latest()->filter(request(['search', 'category', 'author']))
+                ->paginate(7)->withQueryString()
         ]);
     }
 
-    public function show(Post $post) 
+    public function show(Post $post)
     {
         return view('post', [
             "title" => "Single Post",
-            "active"=>'posts',
+            "active" => 'posts',
             "post" => $post
-        ]); 
+        ]);
     }
 }

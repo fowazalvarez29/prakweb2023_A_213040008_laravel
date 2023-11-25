@@ -4,6 +4,7 @@ use App\Http\Controllers\PostController;
 use App\Models\Category;
 use App\Models\User;
 use App\Models\Post;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -57,21 +58,21 @@ Route::get('/categories', function () {
 });
 
 // halaman Category
-Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('posts', [
-        'title' => "Post by Category : $category->name",
-        'active' => 'categories',
-        'posts' => $category->posts->load('category', 'user')
-    ]);
-});
+// Route::get('/categories/{category:slug}', function (Category $category) {
+//     return view('posts', [
+//         'title' => "Post by Category : $category->name",
+//         'active' => 'categories',
+//         'posts' => $category->posts->load('category', 'user')
+//     ]);
+// });
 
-Route::get('/authors/{user:username}', function (User $user) {
-    return view('posts', [
-        'title' => "Pos t by Author : $user->name",
-        'active' => 'posts',
-        'posts' => $user->posts->load('category', 'user'),
-    ]);
-});
+// Route::get('/authors/{user:username}', function (User $user) {
+//     return view('posts', [
+//         'title' => "Pos t by Author : $user->name",
+//         'active' => 'posts',
+//         'posts' => $user->posts->load('category', 'user'),
+//     ]);
+// });
 
 Route::get('/login', [LoginController::class, 'index']);
 
@@ -86,5 +87,5 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->middleware('auth'); // yg bisa akses yang telah terautentikasi
 
-
+Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
